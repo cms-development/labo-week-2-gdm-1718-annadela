@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CampController!{% endblock %}
+{# templates/camp/index.html.twig #}
+
+{% block body %}
+    {{ parent() }}
+    <h1>Vul het formulier in!</h1>
+    {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.title) }}
+    {{ form_row(form.quote) }}
+    {{ form_row(form.date) }}
+    {{ form_row(form.image) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.spotlight) }}
+    {{ form_end(form) }}
+{% endblock %}
